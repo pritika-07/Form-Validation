@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#11110f">
+  <meta name="description" content="Get on the list. Join the Afterhours creative collective.">
+  <title>AFTERHOURS® — Get on the list</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Afterhours home">
+      AFTER<span>HOURS</span><sup>®</sup>
+    </a>
+    <div class="top-status">
+      <span class="status-dot"></span>
+      OPEN FOR NEW MEMBERS
+    </div>
+    <span class="edition">VOL. 001 / 2026</span>
+  </header>
+
+  <main class="layout">
+    <section class="intro">
+      <p class="eyebrow"><span>01</span> THE CREATIVE COLLECTIVE</p>
+
+      <h1>
+        GOOD<br>
+        THINGS<br>
+        HAPPEN<br>
+        <span class="outline-text">AFTER</span><br>
+        <span class="acid-text">HOURS<span class="period">.</span></span>
+      </h1>
+
+      <div class="intro-bottom">
+        <div class="scribble" aria-hidden="true">↘</div>
+        <p>
+          For the curious, the restless, and the
+          people who make things just because
+          they <em>have to.</em>
+        </p>
+      </div>
+
+      <div class="orbit-sticker" aria-hidden="true">
+        <svg viewBox="0 0 120 120">
+          <defs>
+            <path id="circlePath" d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0"/>
+          </defs>
+          <text>
+            <textPath href="#circlePath">
+              MAKE STUFF • MEET PEOPLE • STAY CURIOUS •
+            </textPath>
+          </text>
+        </svg>
+        <span>✳</span>
+      </div>
+
+      <div class="manifesto">
+        <span class="manifesto-label">OUR LITTLE MANIFESTO</span>
+        <p>Less scrolling. More making.<br>Less watching. More doing.</p>
+      </div>
+    </section>
+
+    <section class="form-side" aria-labelledby="form-title">
+      <div class="form-card">
+        <div class="card-top">
+          <span class="card-label">MEMBERSHIP APPLICATION</span>
+          <span class="card-index">AH—001</span>
+        </div>
+
+        <div id="form-content">
+          <div class="form-heading">
+            <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+            <h2 id="form-title">Get on<br>the list<span class="acid-text">.</span></h2>
+            <p class="form-description">
+              No boring bios. Just you, your ideas, and a little ambition.
+            </p>
+          </div>
+
+          <form id="signup-form" novalidate>
+            <div class="field">
+              <label for="fullName">01 / WHAT DO WE CALL YOU?</label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Your full name"
+                autocomplete="name"
+                aria-describedby="name-error"
+                required
+              >
+              <small class="field-error" id="name-error" aria-live="polite"></small>
+            </div>
+
+            <div class="field">
+              <label for="email">02 / WHERE CAN WE FIND YOU?</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@somewhere.com"
+                autocomplete="email"
+                inputmode="email"
+                aria-describedby="email-error"
+                required
+              >
+              <small class="field-error" id="email-error" aria-live="polite"></small>
+            </div>
+
+            <div class="field">
+              <label for="password">03 / CREATE YOUR SECRET CODE</label>
+              <div class="password-wrap">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Make it a good one"
+                  autocomplete="new-password"
+                  aria-describedby="password-error strength-text"
+                  required
+                >
+                <button class="show-password" type="button" id="toggle-password"
+                  aria-label="Show password" aria-pressed="false">SHOW</button>
+              </div>
+              <div class="strength-track" aria-hidden="true">
+                <span id="strength-bar"></span>
+              </div>
+              <div class="strength-row">
+                <small id="strength-text">PASSWORD STRENGTH: —</small>
+                <small>8+ CHARACTERS</small>
+              </div>
+              <small class="field-error" id="password-error" aria-live="polite"></small>
+            </div>
+
+            <div class="field">
+              <label for="confirmPassword">04 / ONE MORE TIME</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Confirm your password"
+                autocomplete="new-password"
+                aria-describedby="confirm-error"
+                required
+              >
+              <small class="field-error" id="confirm-error" aria-live="polite"></small>
+            </div>
+
+            <label class="terms-row" for="terms">
+              <input type="checkbox" id="terms" name="terms">
+              <span class="custom-check" aria-hidden="true"></span>
+              <span>I'm ready to make cool stuff and agree to the
+                <a href="#terms-note" id="terms-link">house rules.</a>
+              </span>
+            </label>
+            <small class="field-error terms-error" id="terms-error" aria-live="polite"></small>
+
+            <p class="house-rules" id="terms-note">
+              Demo project: no real account is created and your details are not sent to a server.
+            </p>
+
+            <button class="submit-btn" type="submit">
+              <span>LET ME IN</span>
+              <span class="button-arrow" aria-hidden="true">↗</span>
+            </button>
+
+            <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="card-footer">
+            <span>NO SPAM. NO WEIRD STUFF.</span>
+            <span>JUST GOOD ENERGY ✳</span>
+          </div>
+        </div>
+
+        <section class="success-panel" id="success-panel" hidden
+          aria-labelledby="success-title" tabindex="-1">
+          <div class="success-symbol" aria-hidden="true">✳</div>
+          <p class="eyebrow">APPLICATION COMPLETE</p>
+          <h2 id="success-title">YOU'RE<br><span class="acid-text">ON THE LIST.</span></h2>
+          <p id="success-message">Your demo registration passed validation.</p>
+          <button class="submit-btn" type="button" id="reset-form">
+            <span>BACK TO THE FORM</span>
+            <span class="button-arrow" aria-hidden="true">↺</span>
+          </button>
+          <p class="demo-note">This is a frontend demo. Nothing was submitted online.</p>
+        </section>
+      </div>
+
+      <div class="below-card">
+        <span>INDEPENDENT MINDS. COLLECTIVE ENERGY.</span>
+        <span>EST. AFTER DARK ↗</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>AFTERHOURS® © 2026</span>
+    <span>BUILT FOR THE ONES WHO BUILD.</span>
+    <a href="#form-title">BACK TO TOP ↑</a>
+  </footer>
+</body>
+</html>
